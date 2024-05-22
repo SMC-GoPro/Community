@@ -1,2 +1,2 @@
 # Community
-GoPro Community Site
+GoPro Community Site Project
