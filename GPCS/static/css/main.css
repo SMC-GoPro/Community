@@ -1,0 +1,87 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.menutitle {
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+
+.menutitle img { margin-right: 5px; }
+.menutitle p { font-size: 30px; }
+
+input[id="menubtn"] {
+    display: none;
+}
+input[id="menubtn"] + label {
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="menubtn"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #fff;
+    transition: all .35s;
+}
+input[id="menubtn"] + label span:nth-child(1) {
+    top: 0;
+}
+input[id="menubtn"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menubtn"] + label span:nth-child(3) {
+    bottom: 0;
+}
+
+input[id="menubtn"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menubtn"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menubtn"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    bottom: -1380px;
+    background-color: darkcyan;
+    padding: 3px 0;
+}
+
+.footer p { margin: 10px; color: white; }
+.foot-name { font-size: 30px; }
+.foot-copyright { font-size: 15px; }
